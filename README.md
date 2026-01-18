@@ -1,5 +1,7 @@
 # HTTP Cache Poisoning Attacks: Response Splitting & Request Smuggling
-Course: 67607 (Cyber Security) - Exercise 3 Authors: Yael Batat & Shir Babian
+> **Course:** 67607 (Cyber Security) - Exercise 3
+> **Authors:** Yael Batat & Shir Babian
+> 
 This repository contains the implementation of advanced HTTP attacks focusing on **Cache Poisoning** vulnerabilities. The project demonstrates how protocol manipulation can desynchronize proxy servers and web servers, implemented in **C** using raw socket programming.
 
 ## 📌 Project Overview
