@@ -23,9 +23,6 @@ The project targets a legacy environment (Apache 2.0.45) to demonstrate historic
 * **`explanation.txt`**
     A theoretical breakdown of the attacks. It details the specific vulnerabilities exploited in the `course_selector` script and the Apache 2.0.45 proxy/server combination, explaining the logic behind the cache poisoning mechanisms.
 
-* **`readme.txt`**
-    Submission metadata containing student identifiers, as required by the course submission guidelines.
-
 ---
 
 ## 🛠️ Technologies
