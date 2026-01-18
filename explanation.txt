@@ -1,0 +1,15 @@
+**HTTP Response Splitting Attack Explanation**
+This attack exploits a vulnerability in the course_selector page where user input is not properly sanitized
+before being embedded in HTTP response headers. By injecting CRLF sequences (%0d%0a) in the URL parameters,
+we can prematurely terminate the original response and inject a second, malicious response.
+The attack includes specific headers like Content-Length and Last-Modified to ensure proper caching.
+When successful, this causes the proxy to cache our injected content (our ID: 322314303) for the target
+page (67607.html).
+
+**HTTP Request Smuggling Attack Explanation**
+This attack exploits the different ways Apache 2.0.45 proxy and web server interpret HTTP request boundaries
+when both Content-Length and Transfer-Encoding headers are present. The proxy server sees Content-Length: 0
+and treats the request as empty, while the web server processes it as chunked encoding.
+This desynchronization allows us to "smuggle" a request to /poison.html, which the proxy caches.
+When a subsequent request for /page_to_poison.html arrives, the proxy returns the cached content
+from /poison.html instead of the actual page content.
